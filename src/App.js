@@ -1,24 +1,20 @@
-import './App.css';
+import React from 'react'
+import Tmdb from './Tmdb'
 
-function App() {
+export default () => {
+
+  useEffect(() =>{
+    const loadAll = async () => {
+      //Pegando a lista!
+    }
+
+    loadAll()
+  }, [])
+
+export default () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Aqui será a interface principal da netflix!!
-        </p>
-        <a
-          className="App-link"
-          href="https://www.netflix.com/browse"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          netflix.com/browse
-        </a>
-      </header>
+    <div>
+      Olá Mundo!
     </div>
-  );
+  )
 }
-
-export default App;
