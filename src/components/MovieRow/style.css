@@ -20,10 +20,10 @@
     cursor: pointer;
 }
 
-,.movieRow--item img {
+.movieRow--item img {
     width: 100%;
     transform: scale(0.9);
-    transition: all ease 0.2;
+    transition: all ease 0.40;
 }
 
 .movieRow--item img:hover {
