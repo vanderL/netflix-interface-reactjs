@@ -64,6 +64,18 @@ export default () => {
 
         ))}
       </section>
+
+      <footer>
+        feito com <span role="img" aria-label="heart">♥</span> <br />
+        Direitos de imagem para netflix <br />
+        Dados do site Themoviedb.org
+      </footer>
+
+      {moviesList.length <= 0 &&
+        <div className="loading">
+          <img src="https://media1.tenor.com/images/9c33f1f5aababce10ab11da844a6cc7e/tenor.gif" alt="loading"></img>
+        </div>
+      }
     </div>
   )
 }

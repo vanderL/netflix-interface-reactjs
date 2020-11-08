@@ -1,5 +1,6 @@
 import React from 'react'
 import './style.css'
+import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 
 export default ({item}) => {
 
@@ -28,7 +29,7 @@ export default ({item}) => {
                     </div>
                     <div className="featured--description">{item.overview}</div>
                     <div className="featured--buttons">
-                        <a href={`/watch/${item.id}`} className="featured--watchbutton">Assistir</a>
+                        <a href={`/watch/${item.id}`} className="featured--watchbutton"><PlayArrowIcon style={{fontSize: 19}} /> Assistir</a>
                         <a href={`/list/add/${item.id}`} className="featured--mylistbutton">+ Minha Lista</a>
                     </div>
                     <div className="featured--genres">
