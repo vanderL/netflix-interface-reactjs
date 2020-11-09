@@ -11,6 +11,10 @@ export default ({item}) => {
         genres.push(item.genres[i].name)    
     }
 
+    let description = item.overview
+    let relevance = item.vote_average * 10
+   
+
     return (
         <section className="featured" style={{
             backgroundSize: 'cover',
@@ -23,13 +27,13 @@ export default ({item}) => {
                         {item.original_name}
                     </div>
                     <div className="featured--info">
-                        <div className="featured--points">{item.vote_average} pontos</div>
+                        <div className="featured--points">{relevance}% relevante</div>
                         <div className="featured--year">{firstDate.getFullYear()}</div>
                         <div className="featured--seasons">{item.number_of_seasons} Temporada{item.number_of_seasons !== 1 ? 's' : ''}</div>
                     </div>
-                    <div className="featured--description">{item.overview}</div>
+                    <div className="featured--description">{description}</div>
                     <div className="featured--buttons">
-                        <a href={`/watch/${item.id}`} className="featured--watchbutton"><PlayArrowIcon style={{fontSize: 19}} /> Assistir</a>
+                        <a href={`/watch/${item.id}`} className="featured--watchbutton">►  Assistir</a>
                         <a href={`/list/add/${item.id}`} className="featured--mylistbutton">+ Minha Lista</a>
                     </div>
                     <div className="featured--genres">
